@@ -1,2 +1,2 @@
 # ProjetoNR01
- projeto de react e nodejs
+ projeto de react
