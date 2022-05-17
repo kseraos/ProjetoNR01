@@ -1,0 +1,77 @@
+.app-menu{
+  display: flex;
+    align-items: center;
+}
+.app-menu__list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .app-menu__item {
+    list-style: none;
+  }
+
+  .app-menu__link {
+    padding: 2px;
+    color: #2270E4;
+    font-family: sans-serif;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  .app-menu__link::first-letter{
+    padding: 5px;
+    border: 1px solid #2270E4;
+    border-radius: 6px;
+    background-color: #E1F2FD;
+    color: #2270E4;
+    font-family: sans-serif;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+
+  .app-menu__link:hover {
+    text-decoration: underline;
+  }
+  .icon{
+    width: 29px;
+  }
+
+  .divBusca{
+    background-color:#ffffff;
+    border:solid 1px #B4B4B4;
+    border-radius:7px;
+    width:190px;
+    display: flex;
+    align-items: center;
+  }
+
+  .txtBusca{
+    float:right;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:22px;
+    width:150px;
+
+  }
+
+  .busca{
+    border: none;
+    border-radius: 7px 0px 0px 7px;
+    background-color: #E3E5E5;
+    width: 30px;
+  }
+
+
+  @media screen and (max-width: 1040px){
+    .app-menu__link{
+      font-size: 12px;
+      color:red;
+    }
+    .icon{
+      width: 22px;
+    }
+  }

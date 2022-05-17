@@ -1,0 +1,129 @@
+.container-cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-register-view{
+    background-color: #F7FAFC;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0px auto;
+
+}
+
+.container-title-regiter-view{
+
+    margin-left: 2%;
+    color: #2A4365;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-cadastrar{
+    background: #253D86;
+    border: 1px solid #213e94;
+    border-radius: 5px;
+    width: 122px;
+    height: 50px;
+    color: #F7FAFC;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 2%;
+    text-decoration: none;
+    text-align: center;
+}
+.table-view{
+    margin: auto;
+    margin-top: 4%;
+    width: 95%;
+}
+
+.cabecalho-view{
+    color: #2A4365;
+    text-align: left;
+    font-family: 'Quicksand';
+}
+
+.cabecalho-view-nome{
+    width: 90%;
+}
+
+.dados-nome{
+    color: #2270E4;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 45px;
+    letter-spacing: 0.15px;
+}
+
+.cabecalho-view-pontos{
+    color: #7D90B2;
+    text-align: center;
+    font-size: 24px;
+}
+
+.dados-status{
+    background: #0A65FF;
+    color: white;
+    text-align: center;
+    border-radius: 38px;
+    border: 7px solid #0a65ff;
+    font-size: 12px;
+}
+
+.update-button{
+    background: #F7FAFC;
+    border: none;
+}
+.update-img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.texto-cadastrar-celular{
+    display: none;
+}
+.texto-cadastrar{
+    display: block;
+    margin-top: 10px;
+}
+
+
+
+
+@media screen and (max-width: 1040px){
+    .container-register-view{
+        width: 90%;
+        border-radius: 5px;
+    }
+    .container-title-regiter-view{
+
+    font-size: 23px;
+    }
+
+    .texto-cadastrar{
+        display: none;
+    }
+    .texto-cadastrar-celular{
+        display: block;
+        font-weight: bold;
+    }
+    .button-cadastrar{
+        height: 40%;
+        width: 11%;
+
+    }
+    .cabecalho-view-pontos{
+        display: none;
+    }
+
+
+}

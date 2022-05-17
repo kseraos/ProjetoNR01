@@ -1,0 +1,39 @@
+
+.view-view-usuario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div-usuario{
+
+   margin: 10px;
+   width: 22%;
+   height: 100px;
+   background: #253D86;
+    border: 1px solid #253D86;
+    border-radius: 22px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #F7FAFC;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 23px;
+}
+a:-webkit-any-link {
+    color: red;
+    text-decoration: none;
+}
+
+.view-view-usuario-one{
+    margin-left: 5%;
+}
+.view-view-usuario-two{
+    margin-left: 25%;
+}
+.view-view-usuario-three{
+margin-left: 48%;
+}
+.view-view-usuario-for{
+margin-left: 70%; }

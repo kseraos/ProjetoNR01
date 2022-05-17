@@ -1,0 +1,19 @@
+.app-footer {
+
+    padding: .5rem 2rem;
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .app-footer__message {
+    color: #595959;
+    font-family: sans-serif;
+  }
+
+  @media screen and (max-width: 1040px){
+    .app-footer{
+
+    margin-top: 30px;
+
+    }
+  }
