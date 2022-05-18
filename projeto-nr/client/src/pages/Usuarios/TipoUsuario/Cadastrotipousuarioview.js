@@ -29,7 +29,7 @@ export default function CadastrotipousuarioView() {
     useEffect(() => {
         axios.get('http://192.168.1.33:3030/api/cadastro/tipos')
             .then(function (response) {
-                console.log(response.data.result)
+
                 setAPIData(response.data.result)
             })
     }, []);

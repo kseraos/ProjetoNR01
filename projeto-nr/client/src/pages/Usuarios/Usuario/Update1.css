@@ -1,0 +1,346 @@
+
+.form-erro{
+    display: block;
+    color: rgb(237,67,55);
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 7px;
+
+}
+
+.container-register-update{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgb(0, 0, 0,0.8) ;
+    display: flex;
+    align-items: center;
+    border: 20px;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+
+.container-title-regiter-update{
+
+    margin-left: 2%;
+    color: #2A4365;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.cadastro-form-group-register-update{
+    border-top: 49px solid #253D86;
+    background-color: #F7FAFC;
+    border-radius: 5px;
+    width: 85%;
+    margin: 0px auto;
+    height: 83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 3px 1px 0px #00000060;
+    margin-top: 26px;
+}
+.cadastro-form-group-conteudo-register-update{
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70%;
+
+}
+.cadastro-form-group-div-regiter-update{
+    width: 40%;
+    margin: 50px;
+    margin-bottom: 0px;
+    height: 20%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 35px;
+
+
+
+}
+
+.form-field-regiter-update{
+
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #E3E5E6;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    display: inline-block;
+    color: #253D86;
+}
+
+.label-register-update{
+    color: #A6A6A6;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 22px;
+    transition: all .3s ease-out;
+
+}
+.label-register-update-select{
+    color: #A6A6A6;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-field-regiter-select{
+    width: 100%;
+}
+
+.form-field-regiter-update:focus{
+    border-bottom: 2px solid #2A4365;
+}
+
+
+.form-field-regiter-update:focus + .label-register-update,.form-field-regiter-update:valid + .label-register-update{
+    font-size: 13px;
+    margin-top: 0;
+    color: #A6A6A6;
+}
+
+.label-register-update:valid{
+    display: none;
+}
+
+
+.button-cadastro-update{
+    background: #253D86;
+    border: 1px solid #213e94;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    color: #F7FAFC;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/* .filtro-um:before,.filtro-dois:before, .filtro-tres:before {
+    content: counter(item) "  ";
+    counter-increment: item;
+    background: #EBEBFF;
+    font-size: 17px;
+    margin-right: 9px;
+    color: #B7B7BC;
+
+} */
+.filtro-dois{
+    margin-right: 40px;
+    display: block;
+}
+
+.filtro-tres{
+    display: block;
+}
+.span-filtro{
+    margin-right: 5px;
+    background: #EBEBFF;
+    border-radius: 100%;
+    width: 3%;
+    height: 3%;
+    text-align: center;
+    font-size: 17px;
+}
+
+.avatar{
+    display: none;
+}
+.avatar-div{
+    width: 23%;
+    height: 122%;
+    background-color: #FFFFFF;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    margin-left: 30px;
+}
+.camera{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+.camera-container{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.p-camera{
+    color: #A6A6A6;
+    font-weight: 600;
+}
+
+.close{
+    background-color: transparent;
+    outline: none;
+    width: 3px;
+    height: 3px;
+    right: calc(-41% + 6px);
+    cursor: pointer;
+    top: 51px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border: none;
+}
+
+.close::after,.close::before {
+    content: '';
+    position: absolute;
+    width: 2.5px;
+    height: 24px;
+    background-color: #FFFF;
+}
+
+.close::before{
+    transform: rotate(45deg);
+}
+.close::after{
+    transform: rotate(-45deg);
+}
+.camera-container{
+    flex-direction: row;
+}
+
+.update-button{
+    background: rgb(237,67,55);
+    border: 1px solid rgb(237,67,55);
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    color: #F7FAFC;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.butao-update{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+
+
+
+@media screen and (max-width: 1040px){
+    .container-title-regiter-update {
+        font-size: 16px;
+    }
+    .cadastro-form-group-conteudo-register-update{
+        justify-content: flex-start;
+        height: 100%;
+    }
+    .cadastro-form-group-div-regiter-update{
+        width: 90%;
+        margin: 20px;
+        height: 8%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .form-field-regiter-update{
+        font-size: 12px;
+    }
+    .label-register-update{
+        font-size: 14px;
+    }
+    .form-erro{
+        font-size: 10px;
+    }
+    .filtro{
+        font-size: 16px;
+    }
+
+    .filtro-ol{
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+
+
+    }
+
+
+    .cadastro-form-group-register-update{
+        box-shadow: 0px 0px 1px 0px #00000060;
+        height: 100%;
+        width: 90%;
+    }
+    .label-register-update{
+        margin-top: 12px
+    }
+    .form-field-regiter-update:focus + .label-register-update, .form-field-regiter-update:valid + .label-register-update{
+        font-size: 10px;
+    }
+    .p-camera{
+        display: none;
+    }
+    .camera-container{
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .avatar-div{
+        width: 28%;
+        height: 117%;
+        margin-top: 60px;
+        background-color: #FFFFFF;
+
+    }
+    .camera{
+        margin-top: 13px
+    }
+    .button-cadastro-update{
+        font-size: 17px;
+    }
+    .filtro-um, .filtro-dois, .filtro-tres{
+        text-align: center;
+
+    }
+    .filtro-um, .filtro-dois{
+        margin-right: 30px;
+    }
+    .span-filtro{
+        display: none;
+    }
+    .update-vazio{
+        display: none;
+    }
+
+
+}
+
+
+
+
+

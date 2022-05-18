@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import PaginationComponents from '../CadastroView/PaginationComponents'
-import PaginationSelect from '../CadastroView/PaginationSelect'
-import { Table, Button } from 'semantic-ui-react';
+import PaginationComponents from './PaginationComponents'
+import PaginationSelect from './PaginationSelect'
+import { Table} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import App from '../../../../Layout/App';
 import './CadastroUsuarioView.css'
-import Update from '../../../../components/imgs/lapis.svg'
-import Delete from '../../../../components/imgs/delete.svg'
-import UpdateModal from '../UpdateUsuario'
 import CadastroModal from '../CadastroUsuario'
+import UpdateUsuario from '../UpdateUsuario'
 
 
 
 export default function CadastroUsuarioView() {
 
     const [isModalVisibleCadastro, setIsModalVisibleCadastro ] = useState(false);
+    const [isModalVisibleUpdate, setIsModalVisibleUpdate ] = useState(false);
     const [APIData, setAPIData] = useState([]);
     const [itensPages, setItensPages] = useState(5);
     const [currentPage, setCurrentPage] = useState(0);
@@ -48,46 +47,30 @@ export default function CadastroUsuarioView() {
         localStorage.setItem('Comissao', comissao_id);
     }
 
-
-
-    const getData = () => {
-        axios.get('http://192.168.1.33:3030/api/cadastro/usuario')
-            .then((getData) => {
-                setAPIData(getData.data);
-            })
-    }
-
-    const onDelete = (id) => {
-        axios.put(`http://192.168.1.33:3030/api/cadastro/usuario_excluir/${id}`)
-        .then(() => {
-            getData();
-            alert("Excluído com sucesso!!");
-            window.location.href = ('/cadastrousuarioview');
-        })
-    };
-
-
     return (
         <App>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
         <div className='container-register-view'>
            <div className='container-cabecalho'>
-                <h1 className='container-title-regiter-view'>Usuários</h1>
+                <div className='container-title-regiter-view'>
+                    <Link  to="/usuario"> Usuários » </Link>
+                    <span> <b>Dados de Usuários</b></span>
+                 </div>
 
-                <Button className='texto-cadastrar button-cadastrar' onClick ={()=>setIsModalVisibleCadastro(true)} >Cadastrar</Button>
+                <div className='texto-cadastrar button-cadastrar' onClick ={()=>setIsModalVisibleCadastro(true)} >Cadastrar</div>
                 <span onClick ={()=>setIsModalVisibleCadastro(true)}  className='texto-cadastrar-celular button-cadastrar'>+</span>
                 {isModalVisibleCadastro ? <CadastroModal onClose={()=>setIsModalVisibleCadastro(false)} /> : null }
 
            </div>
 
            <div>
-           <Table singleLine className='table-view'>
+           <Table  className='table-view' celled>
                <Table.Header>
                    <Table.Row className='cabecalho-view-index'>
 
                        <Table.HeaderCell className='cabecalho-view cabecalho-view-nome'  title="Atualizar Usuario" >Nome</Table.HeaderCell>
-
                        <Table.HeaderCell className='cabecalho-view'>Status</Table.HeaderCell>
-                       {/* <Table.HeaderCell className='cabecalho-view cabecalho-view-pontos'> ...</Table.HeaderCell> */}
+
                    </Table.Row>
 
                </Table.Header>
@@ -102,24 +85,19 @@ export default function CadastroUsuarioView() {
                         var status = "Inativo"
                     }
                    return (
-                    <Table.Row>
-                            <Link to="/updateusuario"> <Table.Cell className='dados-nome' onClick={() => setData(data)}>{data.nome}</Table.Cell> </Link>
-
-                            <Table.Cell><span className='dados-status' >{status}</span></Table.Cell>
-
-                                 <Table.Cell>
-                               <Link to="/updateusuario"> <Button className='update-button' onClick={() => setData(data)} ><img className='update-img' src={Update} alt="atualizar"/></Button></Link>
-
-                               <Button className='update-button' onClick={() => onDelete(data.id)}><img className='update-img' src={Delete} alt="atualizar"/></Button>
-                                <Button className='update-button'> ... </Button>
-                                </Table.Cell>
+                    <Table.Row onClick={() => setData(data)}>
+                          <Table.Cell className='dados-nome' onClick ={()=>setIsModalVisibleUpdate(true)} >{data.nome}</Table.Cell>
+                                 {isModalVisibleUpdate ? <UpdateUsuario onClose={()=>setIsModalVisibleUpdate(false)} /> : null }
+                         <Table.Cell className='dados-status-tam'><span className='dados-status' >{status}</span></Table.Cell>
                     </Table.Row>
                )
                })}
 
                </Table.Body>
            </Table>
+
             <PaginationSelect itensPages ={itensPages} setItensPages={setItensPages} />
+
            <PaginationComponents pages={pages} setCurrentPage={setCurrentPage}/>
        </div>
        </div>

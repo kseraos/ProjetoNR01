@@ -26,7 +26,7 @@ function CadastroUsuario({idModalCadastro = 'modal', onClose=()=>{}}){
   useEffect(() => {
     axios.get('http://192.168.1.33:3030/api/cadastro/tipos')
         .then(function (response) {
-            console.log(response.data.result)
+
             setAPITipo(response.data.result)
         })
 }, []);
@@ -34,7 +34,7 @@ function CadastroUsuario({idModalCadastro = 'modal', onClose=()=>{}}){
 useEffect(() => {
   axios.get('http://192.168.1.33:3030/api/cadastro/comissoes')
       .then(function (response) {
-          console.log(response.data.result)
+
           setAPICom(response.data.result)
       })
 }, []);
@@ -75,18 +75,19 @@ useEffect(() => {
 
 
   }
-  const validationsCadastro  = yup.object().shape({
-    nome: yup.string().min(8, 'campo inválido').required('O nome é obrigatório'),
+  const validationsCadastro  =
+    yup.object().shape({
+    nome: yup.string().min(6, 'campo inválido').required('O nome é obrigatório'),
     email: yup.string().email('Email inválido').required('O email é obrigatório'),
-    senha: yup.string().required("A senha é obrigatória").matches(/[a-zA-Z]/, 'Use apenas letras.'),
-    confirm_password: yup.string().oneOf([yup.ref("senha"), null], "As senhas não sao iguais"),
-    tipo_id: yup.string().min(8, 'campo inválido').required('O tipo é obrigatório'),
+    senha: yup.string().required("A senha é obrigatória").required('Digite uma senha.'),
+    confirm_password: yup.string().oneOf([yup.ref('senha'), null], "As senhas não sao iguais")
   });
 
     return (
 
     <div id = {idModalCadastro} className='container-register' onClick={handleOutsideClick}>
-    <button className='close-cadastro' onClick={onClose}></button>
+    <button className='close' onClick={onClose}></button>
+
       <Formik initialValues={{}}
         // validationSchema={validationsCadastro}
         onSubmit={handleClickButton}
@@ -99,10 +100,9 @@ useEffect(() => {
         <div className='filtro-register'>
             <div className=' filtro dados-usuarios'>
              <ol className='filtro-ol'>
-
-              <span className='span-filtro-um'>1</span><li ><button className="filtro-um">Dados do Usuário</button></li>
-              <span className='span-filtro'>2</span><li className="filtro-dois">Integrações</li>
-              <span className='span-filtro'>3</span><li className="filtro-tres">Preferência de Dados</li>
+             <li className="filtro-dois">Dados do Usuário</li>
+             <li className="filtro-dois">Integrações</li>
+             <li className="filtro-tres">Preferência de Dados</li>
             </ol>
             </div>
        </div>
@@ -166,9 +166,9 @@ useEffect(() => {
             <ErrorMessage component="span" name="confirm_password" className="form-erro"/>
           </div>
           <div className='cadastro-form-group-div-regiter camera-container-cadastro'>
-          <div className='avatar-div'>
-          <Field name="avatar" className="avatar" id="avatar"type="file" onChange={e => setImage(e.target.files[0])}/>
-          <label htmlFor='avatar'> {avatar ? <img className='avatar-usuario' src={URL.createObjectURL(avatar)} width='95' height='95'  alt='teste'/>: <img className='camera' src={Camera}/>}</label>
+           <div className='avatar-div'>
+           <Field name="avatar" className="avatar" id="avatar"type="file" onChange={e => setImage(e.target.files[0])}/>
+            <label htmlFor='avatar'> {avatar ? <img className='avatar-usuario' src={URL.createObjectURL(avatar)} width='95' height='95'  alt='teste'/>: <img className='camera' src={Camera}/>}</label>
 
             </div>
             <p className='p-camera'>Foto</p>

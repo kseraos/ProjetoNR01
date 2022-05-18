@@ -22,8 +22,9 @@
     font-size: 23px;
 }
 a:-webkit-any-link {
-    color: red;
+    color: #2A4365;
     text-decoration: none;
+
 }
 
 .view-view-usuario-one{

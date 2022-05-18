@@ -29,11 +29,12 @@
     margin-left: 2%;
     color: #2A4365;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 16px;
     line-height: 38px;
     display: flex;
     align-items: center;
     text-align: center;
+    margin-bottom: 0;
 }
 
 
@@ -43,11 +44,12 @@
     border-radius: 5px;
     width: 1000px;
     margin: 0px auto;
-    height: 572px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     box-shadow: 3px 3px 1px 0px #00000060;
     margin-top: 12px;
+
 
 }
 .cadastro-form-group-conteudo-register{
@@ -57,6 +59,7 @@
     flex-wrap: wrap;
     justify-content: center;
     height: 70%;
+    font-size: 12px;
 
 }
 .cadastro-form-group-div-regiter{
@@ -134,26 +137,38 @@
     background-color: #FFFFFF;
     margin: auto;
     margin-bottom: 5px;
-    height: 69px;
+    height: 40px;
     width: 588px;
     box-shadow: 10px 14px 70px rgb(0 0 0 / 3%);
     border-radius: 500px;
 }
 .button-cadastro{
-
-
     background: #253D86;
     border: 1px solid #213e94;
     border-radius: 5px;
-    width: 150px;
-    height: 65px;
     color: #F7FAFC;
-    font-size: 23px;
+    font-size: 17px;
     cursor: pointer;
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
 }
 
+.update-button{
+    background: rgb(237,67,55);
+    border: 1px solid rgb(237,67,55);
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    color: #F7FAFC;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
 .filtro{
-    font-size: 18px;
+    font-size: 16px;
     color: #B7B7BC;
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -171,7 +186,7 @@
     padding-left: 0px;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
 }
 
@@ -260,7 +275,13 @@
     color: #A6A6A6;
     font-weight: 600;
 }
-.close-cadastro{
+.butao{
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    align-items: center !important;
+}
+.close{
     background-color: #9aa5c5;
     border-radius: 10px;
     outline: none;
@@ -277,7 +298,7 @@
     position: relative;
 }
 
-.close-cadastro::after, .close-cadastro::before {
+.close::after, .close::before {
     content: '';
     position: absolute;
     width: 1.5px;
@@ -288,18 +309,18 @@
     border-radius: 50px;
 }
 
-.close-cadastro:hover{
+.close:hover{
     background-color: #6676a3;
 }
-.close-cadastro::before{
+.close::before{
     transform: rotate(45deg);
 }
-.close-cadastro::after{
+.close::after{
     transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 1040px){
-    .close-cadastro{
+    .close{
         right: calc(-186px + 42px);
     top: 32px;
     }

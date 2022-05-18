@@ -1,7 +1,6 @@
 .container-cabecalho{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 .container-register-view{
@@ -10,58 +9,56 @@
     flex-direction: column;
     width: 95%;
     margin: 0px auto;
+    min-height: 100%;
 
 }
 
 .container-title-regiter-view{
 
-    margin-left: 2%;
+    margin-left: 1%;
     color: #2A4365;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 16px;
     line-height: 38px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
 .button-cadastrar{
-    background: #253D86;
-    border: 1px solid #213e94;
-    border-radius: 5px;
-    width: 122px;
-    height: 50px;
-    color: #F7FAFC;
-    font-size: 22px;
+
+    color: #253D86;
+    font-size: 16px;
     cursor: pointer;
-    margin-right: 2%;
-    text-decoration: none;
-    text-align: center;
+    margin-left: 1%;
+
 }
 .table-view{
     margin: auto;
-    margin-top: 4%;
+    margin-top: 2%;
     width: 95%;
 }
 
+.table-view tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+
 .cabecalho-view{
     color: #2A4365;
-    text-align: left;
     font-family: 'Quicksand';
 }
 
 .cabecalho-view-nome{
     width: 90%;
+    text-align: left;
 }
 
 .dados-nome{
     color: #2270E4;
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 25px;
+    font-size: 16px;
     line-height: 45px;
     letter-spacing: 0.15px;
+    cursor: pointer;
 }
 
 .cabecalho-view-pontos{
@@ -70,6 +67,9 @@
     font-size: 24px;
 }
 
+.dados-status-tam{
+    text-align: center;
+}
 .dados-status{
     background: #0A65FF;
     color: white;
@@ -79,10 +79,9 @@
     font-size: 12px;
 }
 
-.update-button{
-    background: #F7FAFC;
-    border: none;
-}
+
+
+
 .update-img{
     width: 25px;
     height: 25px;
@@ -94,6 +93,17 @@
 .texto-cadastrar{
     display: block;
     margin-top: 10px;
+}
+
+.pagina-qtd{
+    margin-top: 20px;
+    margin-left: 2%;
+    width: 3%;
+}
+.pagina-num{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 
